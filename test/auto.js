@@ -9,14 +9,18 @@ describe('bluebird-auto', function() {
   it('should return a promise', () => {
     const auto = async.auto();
     auto.should.be.a.Promise();
-  }); 
+  });
 
   it('should call tasks based on their requirements', function() {
     let callOrder = [];
 
     const tasks = {
-      getData: Promise.resolve(1),
-      makeFolder: Promise.resolve(1)
+      readData: Promise.resolve(1),
+      showData: ['readData', results => {
+      	// results.readData is the file's contents
+      	// ...
+
+      }]
     }
 
     async.auto(tasks).then(res => {

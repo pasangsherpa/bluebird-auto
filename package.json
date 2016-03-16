@@ -21,6 +21,8 @@
     "bluebird": "^3.3.4"
   },
   "devDependencies": {
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "ramda": "^0.19.1",
+    "should": "^8.2.2"
   }
 }

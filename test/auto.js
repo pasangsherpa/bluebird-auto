@@ -17,8 +17,8 @@ describe('bluebird-auto', function() {
     const tasks = {
       readData: Promise.resolve(1),
       showData: ['readData', results => {
-      	// results.readData is the file's contents
-      	// ...
+        // results.readData is the file's contents
+        // ...
 
       }]
     }
@@ -27,5 +27,4 @@ describe('bluebird-auto', function() {
       console.log(res)
     });
   });
-
 });
